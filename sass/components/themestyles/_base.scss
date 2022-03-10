@@ -1,0 +1,107 @@
+//******SETTINGS******
+//Colors control, fonts type, Layout, Media Query Breakpoints.
+
+// Colors
+$paragraphtext: #f5f5f1be;
+$offwhite: rgb(209, 209, 209); 
+$white: rgb(255, 255, 255);
+$bodycolor: rgb(0, 0, 0);
+$projecttitle: rgb(0, 0, 0);
+$projectcontentcolor: rgb(63, 63, 63);
+$bgcblue: #252E35;
+
+// Type
+$bodyFont: "SF UI Text", "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif;
+$headingFont: "SF UI Text", "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif; 
+
+
+// Media Query Breakpoints
+$desktoplarge:em(1920);
+$desktopsmall:em(1600);
+$desktopextrasmall:em(1300);
+$desktopmini:em(1400);
+$tabletLandscape: em(1024);
+$tabletPortraitLarge: em(1000);
+$tabletPortrait: em(850);
+$phoneLandscape: em(670);
+$mq620: em(620);
+$phoneLandscapeSmall: em(615);
+$phonePortraitLarge: em(420);
+$phonePortrait: em(340);
+
+//Custom Menu
+$menucolour:#333;
+$highlight:#eeeeaa;
+$lighttext:#eee;
+
+
+a:link,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-family: $bodyFont;
+}
+
+
+//******TYPES******
+h1{ 
+    font-family: $headingFont;
+    font-size: 3em;
+}
+
+h2, h3{
+    font-size: 1.2em;
+}
+
+h2, h3, h4 {
+    font-family: $headingFont;
+    color: $offwhite;
+}
+
+h1, h2, h3, h4{
+    margin: 0 10px 0;
+}
+
+p{
+    color: $offwhite;
+    font-family: $bodyFont;
+}
+
+img{
+    display: block;
+    height: auto;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    list-style: none;
+}
+
+//******UTILITIES******
+// convert Px to Ems
+@function em($px, $bc: 16){
+    @return #{$px/$bc}em; 
+}
+
+// convert Px to Rems
+@function rem($px, $bc: 16){
+    @return #{$px/$bc}rem; 
+}
+
+//******MISC******
+/* Remove vertical borders around site content area */
+.site-content {
+    border: none;
+}
+
+.landing-page{
+    background-color: #fff;
+}

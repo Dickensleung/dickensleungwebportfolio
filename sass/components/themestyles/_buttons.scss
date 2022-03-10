@@ -1,0 +1,80 @@
+//custom theme styling - dickensleungwebportfolio
+.project-card-container{
+    ul{
+        margin: 0;
+        padding: 1.2em 1em;
+        li{
+            a{
+                background: #27273c;
+                color: #fff;
+                margin-bottom: 0.6em;
+                padding: 0.6em 0.9em;
+                display: inline-block;
+                font-size: .85em;
+                line-height: 1em;
+                border-radius: 2px;
+            }
+        }
+    }
+}
+
+.choice-btn{
+	margin: 20px 10px;
+	width: 200px;
+    background-color: rgb(184, 216, 126);
+    font-family: $bodyFont;
+	font-size: 1.15em;
+	font-weight: 700;
+	border: 4px solid rgb(184, 216, 126);
+    border-radius: 5rem;
+	padding: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: all ease-in-out .35s;
+    z-index: 1;
+}
+
+.choice-btn:hover{
+    background-color: rgb(184, 216, 126);
+    border: 4px solid rgb(184, 216, 126);
+	outline: none;
+    -ms-transform: scale(1.05); /* IE 9 */
+    -webkit-transform: scale(1.05); /* Safari 3-8 */
+    transform: scale(1.05); 
+    cursor: pointer;
+}
+#social-icons{
+    visibility: hidden;
+}
+
+
+#social-icons{
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    margin: 0 2em 0 1.5em;
+    
+  
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        padding: 20px 0;
+    }
+    i{
+        color: #fff;
+        font-size: 1.5em;
+        margin: 0 5px;
+    }
+}
+
+
+#social-icons .trailing-line{
+    width: 3rem;
+    height: 0.2rem;
+    background-color: #fff;
+    margin: 0.8rem 1em;
+    transition: 0.4s;
+    border: .05em solid #fff;
+}
