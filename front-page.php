@@ -23,17 +23,18 @@ get_header();
 				<div id="social-icons">
 					<ul>
 						<li>	
-							<i class="fas fa-inbox"><a href="mailto:dickens.leung@outlook.com" target="_blank" rel="noopener noreferrer"></a></i>
+							<a href="mailto:dickens.leung@outlook.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-inbox"></i></a>
 						</li>
 						<li>
-							<i class="fab fa-github"><a href="https://github.com/Dickensleung"></a></i>
+							<a href="https://github.com/Dickensleung"><i class="fab fa-github"></i></a>
 						</li>
 						<li>
-							<i class="fab fa-linkedin-in"><a href="https://www.linkedin.com/in/dickensleung/"></a></i>
+							<a href="https://www.linkedin.com/in/dickensleung/"><i class="fab fa-linkedin-in"></i></a>
 						</li>
 					</ul>
 					<span class="trailing-line"></span>
 				</div>
+				
 				<div class="landing-page">
 					<div class="waveWrapper waveAnimation">
 						<div class="waveWrapperInner bgTop">
@@ -81,9 +82,8 @@ get_header();
 								endif;
 							endif;?>
 						</div>
-
 						
-						<p><a href="mailto:dickens.leung@outlook.com" target="_blank" rel="noopener noreferrer"><u>Send</u></a> me a quick message here!</p>
+						
 						<div class="footer-content">
 							<p class="footer-content-text">Building Projects with:</p>
 							<div class="tools-icon">
@@ -164,12 +164,12 @@ get_header();
 					</div>
 					
 
-			
+					<?php get_footer();?>
 				</div>
 			</section>
 		</body>
 	</main><!-- #main -->
 
 <?php
-get_footer();
+
 

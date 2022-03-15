@@ -1,5 +1,17 @@
 //custom theme styling - dickensleungwebportfolio
+.footer-content{
+    margin: 0;
+}
+
+.site-footer{
+    .site-info{
+        padding: 0 10px;
+        text-align: center;
+    }
+    
+}
 .description-content{
+    z-index: 999;
     .description-header{
         padding: .6em 0;
         h1{
@@ -17,9 +29,7 @@
         }
     }
 
-    .footer-content{
-        margin: 0;
-    }
+
 
    /*.fab{
         font-size: 1.7em;
@@ -114,7 +124,8 @@
                 }
 
                 .tools-icon{
-                    font-size: 1.5em;
+                    font-size: 2.2em;
+                    color: $bgcblue;
                 }
             }
         }

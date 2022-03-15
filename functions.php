@@ -152,19 +152,15 @@ function dickensleungwebportfolio_scripts() {
 		array(),
 		null
 	);
-
-	//js - 	font awesome
-	wp_enqueue_script('fontawesomesocialicons', 'https://kit.fontawesome.com/b07cefef3c.js', array(). null);
-
-	//js -	External script for opening email / contact me options
-	wp_enqueue_script('mailgo', 'https://unpkg.com/mailgo@0.12.2/dist/mailgo.min.js', array(). null);
-
-
+	//custom styling
 	wp_enqueue_style( 'dickensleungwebportfolio-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'dickensleungwebportfolio-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'dickensleungwebportfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'dickensleungwebportfolio-model', get_template_directory_uri() . '/js/modal.js', array(), _S_VERSION, true );
+	
+	//js - 	font awesome
+	wp_enqueue_script('fontawesomesocialicons', 'https://kit.fontawesome.com/b07cefef3c.js', array(). null);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -197,7 +193,7 @@ function custom_taxonomies_terms_links() {
 			$terms = get_the_terms( $post->ID, $taxonomy );
 			if ( !empty( $terms ) ) {
 				foreach ( $terms as $term )
-					$out .= '<a href=#"' .get_term_link($term->slug, $taxonomy) .'">'.$term->name.'</a> ';
+					$out .= '<a href="#' .get_term_link($term->slug, $taxonomy) .'">'.$term->name.'</a> ';
 			}
 			$out .= "</li>";
 		}

@@ -32,6 +32,7 @@
     top: 0;
     height: auto;
     margin: 0 auto;
+    z-index: -1;
 }
 
 .waveWrapperInner {

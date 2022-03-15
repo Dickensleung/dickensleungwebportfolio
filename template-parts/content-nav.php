@@ -11,10 +11,6 @@
 <div class="overlay overlay-slide-left" id="overlay">
 	<!-- MENU ITEMS -->
 	<nav>
-		<div id="logo"></div>
-
-
-
 		<ul>
 			<li id="nav-1" class="slide-out-1 center">
 				<a href="#home" class="center">Home</a>
@@ -35,6 +31,8 @@
 			<li id="nav-5" class="slide-out-5 center">
 				<a href="#contact" class="center">Contact</a>
 			</li>
+
+			
 		</ul>
 	</nav>
 </div>
