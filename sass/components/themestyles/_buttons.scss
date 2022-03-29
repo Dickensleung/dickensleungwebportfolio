@@ -1,8 +1,38 @@
 //custom theme styling - dickensleungwebportfolio
+.user-logo{
+    cursor: pointer;
+    position: fixed;
+    top: 1rem;
+    left: .7em;
+    padding: .4rem 0 0 .4rem;
+    z-index: 99;
+
+    a{
+        font-size: 1.7rem;
+        font-family: $attentionFont;
+        font-weight: 600;
+        background-color: rgb(184, 216, 126);
+        letter-spacing: 1.2px;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+
+    }
+}
+
+.user-logo:hover{
+    a{
+        background-color: #27273c;
+        color: $white;
+    }
+}
 .project-card-container{
     ul{
         margin: 0;
-        padding: 1.2em 1em;
+        padding: 1em .7em;       
         li{
             a{
                 background: #27273c;
@@ -43,38 +73,42 @@
     transform: scale(1.05); 
     cursor: pointer;
 }
-#social-icons{
-    visibility: hidden;
+.footer-content{
+    margin: 15em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
-
-
 #social-icons{
+    padding-top: 2em;
     position: absolute;
     left: 0;
-    bottom: 10%;
-    margin: 0 2em 0 1.5em;
-    
-  
     ul{
-        margin: 0;
+        margin: 0 0 0 1.2em;
         padding: 0;
+        display: flex;
     }
     li{
         padding: 20px 0;
     }
     i{
-        color: #fff;
-        font-size: 1.5em;
+        color: $white;
+        background-color: #27273c;
+        font-size: 1.2em;
         margin: 0 5px;
+        padding: 8px;
+        -webkit-transition: background-color 250ms cubic-bezier(.55, .085, .68, .53);
+        transition: background-color 250ms cubic-bezier(.55, .085, .68, .53);
+    }
+
+    i:hover{
+        color: #27273c;
+        background-color: $white;
     }
 }
 
-
-#social-icons .trailing-line{
-    width: 3rem;
-    height: 0.2rem;
-    background-color: #fff;
-    margin: 0.8em;
-    transition: 0.4s;
-    border: .05em solid #fff;
+.fa-inbox:hover, .fa-github:hover, .fa-linkedin-in:hover{
+    z-index: 999;
 }
+

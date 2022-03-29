@@ -11,13 +11,59 @@
 }
 
 /* ------ MAIN NAV --------- */
-
-.fa-inbox, .fa-github{
-    color: #404040;
-    font-size: 1.7em;
-    margin: 0 0.1em;
+/* Scrollbar decoration -- Chrome, Safari */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+  }
+  ::-webkit-scrollbar-track-piece  {
+      background-color: rgba(184, 216, 126, 0.212);
+  }
+  ::-webkit-scrollbar-thumb:vertical {
+  height: 30px;
+  background-color: #252E35;
+  border-radius: 10px;
 }
+/*--------Footer -------------*/
+.footer-content{
+  .footer-content-text{
+    margin: .4em 0;
+  }
+  .tools-icon{
+    font-size: 1.5em;
+    margin-bottom: 20px;
 
+    .fab:hover{
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    }
+    .fa-html5:hover{
+    color: #E44D26;
+    }
+
+    .fa-css3-alt:hover{
+    color: #264de4;
+    }
+
+    .fa-sass:hover{
+    color: #c69;
+    }
+
+    .fa-js:hover{
+    color: #F0DB4F;
+    }
+
+    .fa-php:hover{
+    color: #565cd1;
+    }
+
+    .fa-react:hover{
+    color: #61DBFB;
+    }
+  
+    
+  }
+}
 
 /* ------ Hamburger --------- */
 .logo-sub-text{
@@ -38,14 +84,14 @@
 
 /* OVERLAY */
 .overlay {
-  z-index: 9;
   position: fixed;
   top: 0;
   right: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.966);
+  background-color: rgba(0, 0, 0, 0.979);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
 .overlay-slide-right {
@@ -63,7 +109,7 @@ nav ul {
   height: 100vh;
   list-style: none;
   margin: auto 0;
-  padding: 4em 0;
+  padding: 10em 0;
   display: flex;
   flex-direction: column;
 }
@@ -71,7 +117,33 @@ nav ul li {
   height: 5.5em;
   margin: .5em 0;
   padding: .7em 0 0 0;
+  a{
+    font-size: 1.25em;
+  }
+
+  a:link{
+    display: inline-block;
+  }
+  
+  a:link::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: $white;
+    transition: width .2s;
+  }
+  
+  a:link:hover::after{
+    width: 100%;
+  }
 }
+
+nav ul li:hover{
+  cursor: pointer;
+}
+
+
 
 
 /***********************/
@@ -150,8 +222,8 @@ nav ul li {
   position: fixed;
   top: 1rem;
   right: 2rem;
-  z-index: 10;
   cursor: pointer;
+  z-index: 999;
 }
 
 .menu-bar1,
@@ -159,7 +231,7 @@ nav ul li {
 .menu-bar3 {
   width: 3rem;
   height: 0.2rem;
-  background-color: #fff;
+  background-color: #000;
   margin: 0.8rem 0;
   transition: 0.4s;
 }
@@ -173,17 +245,20 @@ nav ul li {
 .active .menu-bar1 {
   /* transform: rotate(-45deg) translate(-7px, 8px); */
   transform: rotate(-45deg) translate(-0.7rem, 0.8rem);
+  background-color: $white;
 }
 
 /* FADE OUT SECOND BAR */
 .active .menu-bar2 {
   opacity: 0;
+  background-color: $white;
 }
 
 /* ROTATE LAST BAR */
 .active .menu-bar3 {
   /* transform: rotate(45deg) translate(-6px, -8px); */
   transform: rotate(45deg) translate(-0.6rem, -0.8rem);
+  background-color: $white;
 }
 
 

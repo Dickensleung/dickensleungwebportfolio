@@ -9,10 +9,13 @@ $bodycolor: rgb(0, 0, 0);
 $projecttitle: rgb(0, 0, 0);
 $projectcontentcolor: rgb(63, 63, 63);
 $bgcblue: #252E35;
+$iconyellow: #ebff00;
 
 // Type
 $bodyFont: "SF UI Text", "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif;
-$headingFont: "SF UI Text", "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif; 
+$headingFont: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+$attentionFont: "Playfair Display", "sans-serif";
+$subFont: "Roboto Mono", "sans-serif";
 
 
 // Media Query Breakpoints
@@ -40,14 +43,14 @@ a:visited {
   color: #fff;
   text-decoration: none;
   transition: all 0.3s;
-  font-family: $bodyFont;
+  font-family: $attentionFont;
 }
 
 
 //******TYPES******
 h1{ 
     font-family: $headingFont;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 h2, h3{

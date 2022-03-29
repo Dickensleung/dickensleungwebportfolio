@@ -1,42 +1,11 @@
 //custom theme styling - dickensleungwebportfolio
 @media only screen and (min-width: 768px){
-    .overlay{
-        width: 35%;
-    }
-
-    .content{
-        position: relative;
-    }
-
-    .content #leftcol{
-        padding: 12em 4em;
-        height: 95vh;
-        position: fixed;
-        width: 65%;
-    }
-
-    .content #rightcol{
-        position: absolute;
-        top: 0;
-        right: 0;
-        background-color: #fff;
-        max-width: 35%;
-        z-index: -1;
-        padding: 6em 1em;
-        overflow: hidden;
-    }
-
     .content .project-card-container{
-        height: 100vh;
         padding: 0;
     }
 
     .project-card-container #project-card-wrapper{
-        margin: 0 0 2.5em 0;
-    }
-
-    .hamburger-menu{
-        z-index: 999;
+        margin: 0 0 1em 0;
     }
 
     .menu-bar1, .menu-bar2, .menu-bar3 {
@@ -46,62 +15,75 @@
     .active .menu-bar1, .active .menu-bar2 , .active .menu-bar3{
         background-color: #fff;
     }
-
-    .choice-btn{
-        margin: 5px 10px;
+    .content{
+        #rightcol{
+            visibility: visible;
+        }
     }
-
-
 
 }
 
 @media only screen and (min-width: 912px){
     .overlay{
-        width: 25%;
+        width: 50%;
     }
 
-}
-@media only screen and (min-width: 912px){
-    .content #leftcol{
-        padding: 12em 8em;
+    nav ul{
+        padding: 15em 0;
     }
+
+
+
 
 }
 
 @media only screen and (min-width: 1320px){
-    .content #rightcol{
-        padding: 6em 2.5em;
+    .description-content{
+        padding: 0 0 0 4.5em;
     }
 
-    #social-icons{
-        visibility: visible;
+    .content{
+        #rightcol{
+            padding: 2em 4.5em;
+        }
     }
+
+    
+    
+}
+
+.user-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media only screen and (min-width: 1600px){
-    .content #leftcol{
-        padding: 14em 20em;
-    }
+    .description-content .description-header{
+        h1{
+            font-size: 3em;
+           
+        }
 
-    /*.description-content {
-        .description-header{
-            h1{
-                font-size: 3em;
-            }
-            
-            h2{
-                font-size: 2em;
-            }
-
+        h2{
+            font-size: 2.5em;
+            line-height: 43px;
         }
         
-        .body-content-row, .body-content-column{
-            font-size: 1.4em;
+    }
+
+    .content{
+        #project-card-wrapper{
+            a{
+                height: 2.45em;
+            }
+            #project-title{
+                font-size: 4.2em;
+            }
         }
-    }*/
+    }
+    
 }
-
-
 
 //MIN-HEIGHT QURIES
 

@@ -13,11 +13,13 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( '%1$s %2$s.', 'dickensleungportfolio' ), '©2021 DICKENS LEUNG PORTFOLIO-ALL RIGHTS RESERVED', '<a href="http://underscores.me/"></a>' );
-				?>
+			<?php
+			/* translators: 1: Theme name, 2: Theme author. */
+			printf( esc_html__( '%1$s %2$s', 'dickensleungportfolio' ), '©2022 DICKENS LEUNG PORTFOLIO-ALL RIGHTS RESERVED.', '<a href="http://underscores.me/"></a>' );
+			?>
+			
 		</div><!-- .site-info -->
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
