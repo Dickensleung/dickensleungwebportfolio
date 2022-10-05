@@ -28,9 +28,16 @@
 
 /* Individual Theme Styling Starts 
 --------------------------------------------- */
+
 @import "themestyles/base";
 @import "themestyles/nav";
 @import "themestyles/frontpage";
+@import "themestyles/modal";
 @import "themestyles/buttons";
-@import "themestyles/mediaquries";
 @import "themestyles/footer";
+@import "themestyles/imagehover";
+@import "themestyles/404";
+@import "themestyles/aboutme";
+@import "themestyles/single";
+@import "themestyles/works";
+@import "themestyles/mediaquries";

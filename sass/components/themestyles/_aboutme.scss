@@ -1,0 +1,58 @@
+.about-me-page-container{
+    padding: 16px;
+
+}
+
+.about-me-header{
+    padding: 4em 0 0 0;
+    line-height: 44px;
+
+    h1{
+        font-size: 2rem;
+        font-family: $attentionFont;
+        font-weight: 600;
+        line-height: 44px;
+        color: #27273c;
+        width: auto;
+    }
+
+    h2{
+        font-family: $bodyFont;
+        letter-spacing: 2px;
+        font-size: 1em;
+    }
+
+}
+
+.about-right{
+    padding: 3em 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    h2{
+        padding: 0 10px;
+        text-transform: uppercase;
+        font-size: 1em;
+        letter-spacing: 2px;
+        color: #999;
+        font-family: $bodyFont;
+    }
+
+    button{
+        margin: 0 10px;
+        text-transform: uppercase;
+        background: none;   
+    }
+}
+
+.about-me-paragraph{
+    color: #000;
+    font-family: $bodyFont;
+    font-size: 1.2rem;
+    line-height: 30px;
+    margin: 32px 0 0;
+}
+

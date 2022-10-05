@@ -138,26 +138,14 @@ add_action( 'widgets_init', 'dickensleungwebportfolio_widgets_init' );
  * Enqueue scripts and styles.
  */
 function dickensleungwebportfolio_scripts() {
-	//TYPE FACE (WEB FONT)
-	wp_enqueue_style( 
-		'googlefonts', 
-		'http://fonts.googleapis.com/css?family=Comfortaa:400,700',
-		array(),
-		null
-	);
-	//TYPE FACE (WEB FONT)
-	wp_enqueue_style( 
-		'googlefonts', 
-		'http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900',
-		array(),
-		null
-	);
-	//custom styling
+	//CSS FILES
 	wp_enqueue_style( 'dickensleungwebportfolio-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'dickensleungwebportfolio-style', 'rtl', 'replace' );
 
+	//JS FILES
 	wp_enqueue_script( 'dickensleungwebportfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'dickensleungwebportfolio-model', get_template_directory_uri() . '/js/modal.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'dickensleungwebportfolio-modal', get_template_directory_uri() . '/js/modal-update.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'dickensleungwebportfolio-persistent-image-rollover-settings', get_template_directory_uri().'/js/persistent-image-rollover-settings.js', array('jquery'), '20210406', true );
 	
 	//js - 	font awesome
 	wp_enqueue_script('fontawesomesocialicons', 'https://kit.fontawesome.com/b07cefef3c.js', array(). null);
@@ -168,13 +156,6 @@ function dickensleungwebportfolio_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'dickensleungwebportfolio_scripts' );
-
-
-//css files - animate background style on front-page.php
-function wpb_animate_styles() {
-	wp_enqueue_style( 'animate-css', get_stylesheet_directory_uri() . '/css/animate.css', '3.5.0', 'all');
-}
-add_action( 'wp_enqueue_scripts', 'wpb_animate_styles' );
 
 // get taxonomies terms links
 //https://stackoverflow.com/questions/15502811/display-current-post-custom-taxonomy-in-wordpress/15505132
@@ -228,7 +209,7 @@ function dl_register_taxonomies() {
 	);
 
 	$args = array(
-		'hierarchical'          => false,
+		'hierarchical'          => true,
 		'labels'                => $labels,
 		'show_ui'               => true,
 		'show_in_menu'          => true,

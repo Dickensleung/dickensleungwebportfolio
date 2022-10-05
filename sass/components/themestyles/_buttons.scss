@@ -13,12 +13,14 @@
         font-weight: 600;
         background-color: rgb(184, 216, 126);
         letter-spacing: 1.2px;
-        color: black;
+        color: #27273c;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100px;
-        height: 100px;
+        width: 3em;
+        height: 3em;
+        font-size: 1.4em;
+        transition: 0.3s;
 
     }
 }
@@ -48,25 +50,45 @@
     }
 }
 
+#single-col-left{
+    ul{
+        display: none;
+        li{
+            margin: 4rem 0 2rem 0;
+            padding: 0 5px;
+        }
+        a{
+            padding: 5px;
+            width: 200px;
+            background-color: #27273c;
+            font-family: $attentionFont;
+            border: none;
+            overflow: hidden;
+            transition: all ease-in-out .35s;
+            z-index: 1;
+            color: $white;
+            
+        }
+    }
+}
+
 .choice-btn{
 	margin: 20px 10px;
 	width: 200px;
-    background-color: rgb(184, 216, 126);
-    font-family: $bodyFont;
-	font-size: 1.15em;
-	font-weight: 700;
-	border: 4px solid rgb(184, 216, 126);
-    border-radius: 5rem;
-	padding: 10px;
+    background-color: none;
+    font-family: $attentionFont;
+    border: none;
+	border-bottom: 8px solid $iconyellow;
     position: relative;
     overflow: hidden;
     transition: all ease-in-out .35s;
     z-index: 1;
+    color: $projectcontentcolor;
 }
 
 .choice-btn:hover{
-    background-color: rgb(184, 216, 126);
-    border: 4px solid rgb(184, 216, 126);
+    background-color: $iconyellow;
+    border-bottom: 8px solid $iconyellow;
 	outline: none;
     -ms-transform: scale(1.05); /* IE 9 */
     -webkit-transform: scale(1.05); /* Safari 3-8 */
@@ -74,14 +96,14 @@
     cursor: pointer;
 }
 .footer-content{
-    margin: 15em 0;
+    margin: 4em 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
 #social-icons{
-    padding-top: 2em;
+    padding: 2em 1rem 0 1rem;
     position: absolute;
     left: 0;
     ul{
@@ -110,5 +132,117 @@
 
 .fa-inbox:hover, .fa-github:hover, .fa-linkedin-in:hover{
     z-index: 999;
+}
+
+#live-site-link{
+    width: auto;
+    height: 25px;
+    background: none;
+    border: none;
+    color: $frontpagetext;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    -webkit-transition: background-color 250ms cubic-bezier(.55, .085, .68, .53);
+    transition: background-color 250ms cubic-bezier(.55, .085, .68, .53);
+    display: inline-block;
+    padding: 0 5px;
+    
+}
+#live-site-link:hover{
+    background-color: $iconyellow;
+    cursor: pointer;
+}
+
+#live-site-link::before{
+    content: '🢒';
+    width: 10px;
+    height: 25px;
+    background-color: $iconyellow;
+    padding: 0 5px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+//CSS Utilities
+
+#page-end-footer{
+    width: 100%;
+    height: 3em;
+    background-color: #fafafa; 
+    position: fixed;
+    bottom: 0;
+}
+
+#block-underline{
+    width: 100%;
+    height: 2px;
+    margin-top: 24px;
+    padding-top: 0px;
+    background-color: $offwhite;
+}
+
+
+.nav-previous, .nav-next{
+    -webkit-transition: background-color 250ms cubic-bezier(.55, .085, .68, .53);
+    transition: background-color 250ms cubic-bezier(.55, .085, .68, .53);
+}
+
+.nav-next, .nav-previous{
+    span{
+        color: $frontpagetext;
+        font-size: 1.2rem;
+    }
+}
+
+.nav-previous a:hover, .nav-next a:hover{
+	background-color: $iconyellow;
+    padding: 10px 0;
+}
+
+#design-processes{
+    display: block;
+    width: 100%;
+    margin: 2em 0 4em 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+   
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    h2{
+        letter-spacing: 2px;
+        font-size: .9rem;
+    }
+}
+
+.process-block{
+    height: 64px;
+    margin-top: 8px;
+    background-color: $paragraphtext;
+    padding: 20px 0 20px 20px;
+    font-size: 1.4rem;
+    color: $frontpagetext;
+    font-weight: 400;
+    font-family: $attentionFont;
+}
+
+.site-main{
+    .post-navigation{
+        width: 100%;
+    }
 }
 

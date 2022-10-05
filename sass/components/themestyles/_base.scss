@@ -10,6 +10,7 @@ $projecttitle: rgb(0, 0, 0);
 $projectcontentcolor: rgb(63, 63, 63);
 $bgcblue: #252E35;
 $iconyellow: #ebff00;
+$gentlegreen: #b8d87e;
 
 // Type
 $bodyFont: "SF UI Text", "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif;
@@ -36,11 +37,12 @@ $phonePortrait: em(340);
 $menucolour:#333;
 $highlight:#eeeeaa;
 $lighttext:#eee;
+$frontpagetext: #0f0f0f;
 
 
 a:link,
 a:visited {
-  color: #fff;
+  color: #333;
   text-decoration: none;
   transition: all 0.3s;
   font-family: $attentionFont;
@@ -62,18 +64,16 @@ h2, h3, h4 {
     color: $offwhite;
 }
 
-h1, h2, h3, h4{
-    margin: 0 10px 0;
-}
-
 p{
-    color: $offwhite;
-    font-family: $bodyFont;
+    font-family: $subFont;
+    line-height: 26px;
+    font-size: 1.2rem;
 }
 
 img{
     display: block;
     height: auto;
+    margin: 0;
 }
 
 button:hover{
@@ -82,6 +82,8 @@ button:hover{
 
 ul{
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 li{

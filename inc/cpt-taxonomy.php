@@ -209,7 +209,6 @@ add_action( 'init', 'dl_register_custom_post_types' );
 
 function dl_rewrite_flush() {
     dl_register_custom_post_types();
-    // gt_register_taxonomies();
     flush_rewrite_rules();
 
 }

@@ -1,5 +1,7 @@
 //custom theme styling - dickensleungwebportfolio
+
 @media only screen and (min-width: 768px){
+
     .content .project-card-container{
         padding: 0;
     }
@@ -15,50 +17,127 @@
     .active .menu-bar1, .active .menu-bar2 , .active .menu-bar3{
         background-color: #fff;
     }
-    .content{
-        #rightcol{
-            visibility: visible;
+
+    .about-me-page-container{
+        max-width: 928px;
+        margin: 0 auto;
+    }
+    .about-left{
+        float: left;
+        width: 55%;
+    }
+
+    .about-right{
+        float: right;
+        width: 35%;
+        margin-top: 8em;
+        a{
+            margin: 50px 0 0 0;
         }
     }
 
+    .single-hero-container{
+        .single-hero-header{
+            h2{
+                visibility: visible;
+            }
+        }
+    }
+
+    .single-layout{
+        flex-direction: row;
+
+        #single-col-left{
+            margin: 1em 1em 1.5em 1em;
+        }
+
+        #single-col-right{
+            margin: 1em;
+            width: 80%;
+        }
+    }
+
+    .error-not-found{
+        padding: 8rem;
+    }
+
+    #design-processes{
+        margin: 1em 0 4em 0;
+    }
+
+    #single-col-left{
+        ul{
+            display: contents;
+        }
+    }
 }
 
 @media only screen and (min-width: 912px){
-    .overlay{
-        width: 50%;
-    }
 
     nav ul{
         padding: 15em 0;
     }
 
-
-
+    .entry-title{
+        font-size: 4rem;
+    }
 
 }
 
-@media only screen and (min-width: 1320px){
-    .description-content{
-        padding: 0 0 0 4.5em;
+@media only screen and (min-width: 1180px){
+    #project-card-wrapper{
+        visibility: visible;
+    }
+
+    #nav-4{
+        display: none;
+    }
+
+    .about-me-wrapper{
+        #project-second-link{
+            visibility: hidden;
+        }
     }
 
     .content{
         #rightcol{
-            padding: 2em 4.5em;
+            width: 75%;
         }
     }
-
-    
-    
 }
 
-.user-logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+@media only screen and (min-width: 1320px){
+    .user-logo{
+        a{
+            width: 98px;
+            height: 98px;
+            font-size: 1.7rem;
+        }
+    }
+    .description-content{
+        padding: 4.5em 0 0 6em;
+    }
+
+    .content{
+        #rightcol{
+            padding: 0;
+        }
+    }
+    
+    .description-header{
+        margin: 4em 0 4em 0;
+    }
+
+    #social-icons{
+        padding: 0 1rem 0 1rem;
+    }
+
 }
+
 
 @media only screen and (min-width: 1600px){
+
     .description-content .description-header{
         h1{
             font-size: 3em;
@@ -66,7 +145,7 @@
         }
 
         h2{
-            font-size: 2.5em;
+            font-size: 2.2em;
             line-height: 43px;
         }
         
@@ -75,21 +154,76 @@
     .content{
         #project-card-wrapper{
             a{
-                height: 2.45em;
+                height: 2.40em;
             }
             #project-title{
                 font-size: 4.2em;
             }
         }
     }
+
+
     
 }
 
 //MIN-HEIGHT QURIES
+@media only screen and (min-height: 200px){
+    .description-header{
+        padding: 8em 1em 0 1em;
+    }
+}
+@media only screen and (min-height: 667px){
+    .about-left{
+        padding: 4em 0 0 0;
+    }
+
+    .paragraph-two{
+        display: none;
+    }
+    
+    .paragraph-three{
+        display: none;
+    }
+
+    .description-header{
+        padding: 13em 1em 0 1em;
+    }
+}
+@media only screen and (min-height: 844px){
+   
+    .paragraph-three{
+        display: block;
+    }
+
+}
+@media only screen and (min-width: 783px) and (min-height: 930px){
+    .paragraph-two{
+        display: block;
+    }
+
+}
+
 
 @media only screen and (min-height: 1024px){
-    nav ul{
-        padding: 6em 0;
+    .description-content .description-header{
+        h1{
+            font-size: 3.8em;
+           
+        }
+
+        h2{
+            font-size: 2.2em;
+        }
+        
     }
+
+    .about-me-page-container{
+        margin: 0 20px;
+    }
+
+    .about-left{
+        padding: 2.5em 0 2em 0;
+    }
+
 
 }

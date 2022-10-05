@@ -18,20 +18,21 @@ get_header();
 	<main id="primary" class="site-main">
 		<?php get_template_part('template-parts/content-nav');?>	
 		<section class="content" id="scroll">
-			
 			<!-- left col-->
 			<div id="leftcol">
 				<div class="description-content">
 					<div class="description-header">
 						<h1>Dickens Leung, </h1>
-						<h2>I am a Front-End Developer from beautiful Vancouver, BC.</h2>
+						<h2>I am a Front-End Developer</h2>
+						<h2>working from beautiful Vancouver, BC.</h2>
 					</div>
 
 					<div class="about-me-wrapper" id="about-me-wrapper">
-						<h2><u>About me</u></h2>
+						<h2><u><a class="about-me-link" href="/about/">About me</a></u></h2>
+					<?php if(function_exists('get_field')):?>
+						<h2 id="project-second-link"><u class="about-me-link">My Works</u></h2>
 						<div class="about-content">
-							<?php if(function_exists('get_field')): 
-								if(get_field('about_me')):
+							<?php if(get_field('about_me')):
 									echo '<p class="body-content-row">';
 									the_field('about_me');
 									echo '</p>';
@@ -52,8 +53,9 @@ get_header();
 										the_field('about_me_three');
 										echo '</p>';
 									endif;
-								endif;?>	
+								?>	
 							</div>
+							<?php endif;?><!--end about me loop-->
 						</div>
 
 						<div id="social-icons">
@@ -83,31 +85,38 @@ get_header();
 						'post_type'      => 'dl-works',
 						'posts_per_page' => -1,
 						'orderby'		 => 'title',
-						'order'			 => 'ASC',
+						'order'			 => 'DES',
 					);
 					$query = new WP_Query( $args);?>
+					<!-- linking to single post '<a id="project-link" href="' . esc_url( get_permalink() ) . '">';-->
+					<!-- LIVE SITE LINK '<a id="project-link" target="_blank" href="'; the_field('live_site_link');'">';-->
 					<ul id="project-card-wrapper">
+						<h3 class="project-sub-title">my works</h3>
 						<?php if ( $query -> have_posts() ){
-							while ($query-> have_posts()) : $query -> the_post();
-								if ( function_exists( 'get_field' )) :
-									if ( get_field( 'project_title' ) ) {
-									echo '<li>';
-									echo '<a id="project-link" href="' . esc_url( get_permalink() ) . '">';
-									echo '<h3 id="project-title" data-controls="#' . esc_attr(strtolower(get_the_title()) ) . '">' . esc_attr( get_the_title() ) . '</h3>';
-									echo '</a>';
-									echo '</li>';
+								while ( $query-> have_posts() ) {
+									$query -> the_post();
+									if ( function_exists( 'get_field' ) ) {
+										echo '<li>';
+										//echo '<a id="project-link" href="' . esc_url( get_permalink() ) . '">';
+										echo '<a id="project-link" target="_blank" href="';
+										echo the_field('live_site_link');
+										echo '">';
+										echo '<h3 id="project-title" data-controls="#' . esc_attr(strtolower(get_the_title()) ) . '">' . esc_attr( get_the_title() ) . '</h3>';
+										echo '</a>';
+										echo '</li>';
 									}
-								
-								endif;
-							endwhile;
+								}
+								wp_reset_postdata();
 						}?>
-					</ul>
-				<?php endwhile; ?><!--end the loop--> 
+					</ul><!--end project card wrapper -->
 
-				<div id="featured-image">
-				
-				</div>
-				
+					<div class="featured-image">
+						<img alt="default-img" class="default-img" src="<?php echo get_template_directory_uri();?>/images/default-img.png">
+						<img alt="desination-hyrule" class="desination-hyrule" src="<?php echo get_template_directory_uri();?>/images/desination-hyrule.jpg">
+						<img alt="cat-cafe" class="cat-cafe" src="<?php echo get_template_directory_uri();?>/images/cat-cafe.jpg">
+						<img alt="movie-watch" class="movie-watch" src="<?php echo get_template_directory_uri();?>/images/movie-watch.jpg">
+					</div>
+				<?php  endwhile; ?><!--end of the page loop-->
 			</div><!-- End rightcol-->
 		</section><!-- end page content -->
 

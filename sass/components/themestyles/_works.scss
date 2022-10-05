@@ -1,0 +1,50 @@
+//styling for archieve.php 
+.error-not-found{
+    margin: 8rem auto;
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-title{
+    padding: 0 10px;
+    font-size: 1.1rem;
+}
+
+.entry-title{
+    color: #000;
+    font-family: $attentionFont;
+    position: static;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin-top: -40px;
+    font-size: 2rem;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    opacity: 1;
+    transform-style: preserve-3d;
+    
+    a{
+        height: 2em;
+        max-width: 600px;
+        margin-top: 49px;
+        -webkit-transition: background-color 250ms cubic-bezier(.55, .085, .68, .53);
+        transition: background-color 250ms cubic-bezier(.55, .085, .68, .53);
+        cursor: pointer;
+        display: inline-block;
+        padding: 10px;
+    }
+
+    a:hover {
+        background-color: #ebff00;
+    }  
+}
+
+.dl-works{
+    display: flex;
+    flex-direction: row;
+    img{
+        display: none;
+    }
+}
