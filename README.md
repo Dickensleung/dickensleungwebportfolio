@@ -1,6 +1,10 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
 _s
+
+**This is meant to be a child's theme. Please install on a new WordPress site for less confusion othere live site link below: 
+
+https://www.dickens-leung.com/
 ===
 
 Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
@@ -21,6 +25,7 @@ Note: `.no-sidebar` styles are automatically loaded.
 
 Installation
 ---------------
+
 
 ### Requirements
 
