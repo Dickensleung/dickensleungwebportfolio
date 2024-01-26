@@ -16,7 +16,8 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-
+		<?php get_template_part('template-parts/content-loading');?>
+		
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -30,7 +31,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-
+		<?php get_template_part('template-parts/content-page-footer');?>
 	</main><!-- #main -->
 
 <?php

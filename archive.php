@@ -11,16 +11,21 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-		<section class="error-not-found content">
-				<?php get_template_part('template-parts/content-nav');?>
+		<?php get_template_part('template-parts/content-loading');?>
+		<?php get_template_part('template-parts/content-nav');?>	
+		<section class="error-not-found">
 			<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				?>
+				<p>This is a showcase of my work in a variety of fields including copywriting, development & web design.</p> 
+			<p>The world of digital design and developer is contantly evolving and so has my role. I'm still learning and gaining new skills every day.</p>
 			</header><!-- .page-header -->
+			<div class="work-wrapper">
 			<?php
+
 				/* Start the Loop */
 				while ( have_posts() ) :
 					the_post();
@@ -41,8 +46,13 @@ get_header();
 				get_template_part( 'template-parts/content', 'none' );
 
 				endif;
-			?>
+				?>
+
+			</div>
+
+			<?php get_template_part('template-parts/content-page-footer');?>
 		</section>
+
 	</main><!-- #main -->
 
 <?php

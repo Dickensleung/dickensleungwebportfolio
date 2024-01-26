@@ -16,14 +16,18 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-		<?php get_template_part('template-parts/content-nav');?>	
+		<?php get_template_part('template-parts/content-loading');?>
+		<div class="theme-page-header"><?php get_template_part('template-parts/content-nav');?></div>	
 		
 		<section class="about-me-page-container">
 			<div class="about-left">
 				<article class="about-me-header">
-					<h2>hello</h2>
-					<h1>My name is Dickens.</h1>
-					<h1>I am a front-end developer and a musician.</h1>
+					<h2>about me</h2>
+					<div class="about-me-header-innerwrap">
+						<img alt="about-me-profile-picture" class="profile-picture profile-picture-mobile" src="<?php echo get_template_directory_uri();?>/images/profile-picture.jpg">
+						<h1>the Developer.</h1>
+					</div>
+
 				</article>
 				
 
@@ -54,10 +58,9 @@ get_header();
 				<h2>get in touch</h2>
 				<a href="mailto:dickens.leung@outlook.com" target="_blank" rel="noopener noreferrer"><button class="choice-btn">email</button></a>
 			</aside>
+			<?php get_template_part('template-parts/content-page-footer');?>
 		</section>
-
-	
-		<section id="page-end-footer"></section>
+							
 	</main><!-- #main -->
 
 <?php

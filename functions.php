@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( '_S_VERSION', '2.0.0' );
 }
 
 /**
@@ -138,17 +138,21 @@ add_action( 'widgets_init', 'dickensleungwebportfolio_widgets_init' );
  * Enqueue scripts and styles.
  */
 function dickensleungwebportfolio_scripts() {
-	//CSS FILES
-	wp_enqueue_style( 'dickensleungwebportfolio-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'dickensleungwebportfolio-style', 'rtl', 'replace' );
 
 	//JS FILES
+	wp_enqueue_script( 'dickensleungwebportfolio-slickslider', get_template_directory_uri(). '/js/slick.min.js', array('jquery'), '20240125', true );
+	wp_enqueue_script( 'dickensleungwebportfolio-slick-setting', get_template_directory_uri(). '/js/slick-setting.js', array('jquery', 'dickensleungwebportfolio-slickslider'), '20240125', true );
 	wp_enqueue_script( 'dickensleungwebportfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'dickensleungwebportfolio-modal', get_template_directory_uri() . '/js/modal-update.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'dickensleungwebportfolio-persistent-image-rollover-settings', get_template_directory_uri().'/js/persistent-image-rollover-settings.js', array('jquery'), '20210406', true );
+	wp_enqueue_script( 'dickensleungwebportfolio-darkmode-toggle', get_template_directory_uri() . '/js/darkmode-toggle.js', array(), _S_VERSION, true );
+
+	wp_enqueue_script( 'dickensleungwebportfolio-persistent-image-rollover-settings', get_template_directory_uri().'/js/persistent-image-rollover-settings.js', array('jquery'), '20240125', true );
 	
-	//js - 	font awesome
-	wp_enqueue_script('fontawesomesocialicons', 'https://kit.fontawesome.com/b07cefef3c.js', array(). null);
+	//CSS FILES
+	wp_enqueue_style( 'dickensleungwebportfolio-style', get_stylesheet_uri(), array(), rand(111,2222), 'all');
+	wp_style_add_data( 'dickensleungwebportfolio-style', 'rtl', 'replace' );
+	wp_enqueue_style( 'dickensleungwebportfolio-slick', get_template_directory_uri() . '/css/slick.css' );
+	wp_enqueue_style( 'dickensleungwebportfolio-slicktheme', get_template_directory_uri() . '/css/slick-theme.css' );
+	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -169,14 +173,12 @@ function custom_taxonomies_terms_links() {
     $taxonomies = get_object_taxonomies($post_type);
     $out = "<ul>";
 		foreach ($taxonomies as $taxonomy) {        
-			$out .= "<li>" ."";
 			// get the terms related to post
 			$terms = get_the_terms( $post->ID, $taxonomy );
 			if ( !empty( $terms ) ) {
 				foreach ( $terms as $term )
-					$out .= '<a href="#' .get_term_link($term->slug, $taxonomy) .'">'.$term->name.'</a> ';
+					$out .= '<li><a href="#' .get_term_link($term->slug, $taxonomy) .'">'.$term->name.'</a></li>';
 			}
-			$out .= "</li>";
 		}
     $out .= "</ul>";
     return $out;
@@ -222,6 +224,8 @@ function dl_register_taxonomies() {
 	register_taxonomy( 'dl-skill', array( 'dl-works' ), $args );
 }
 add_action( 'init', 'dl_register_taxonomies');
+
+
 
 /**
  * Implement the Custom Header feature.

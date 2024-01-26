@@ -15,7 +15,9 @@
 		<div class="site-info">
 			<?php
 			/* translators: 1: Theme name, 2: Theme author. */
-			printf( esc_html__( '%1$s %2$s', 'dickensleungportfolio' ), '©2022 DICKENS LEUNG PORTFOLIO-ALL RIGHTS RESERVED.', '<a href="http://underscores.me/"></a>' );
+			$current_year = date("Y"); 
+			$copy_rights = "2021-". $current_year . " DICKENS LEUNG PORTFOLIO. ALL RIGHTS RESERVED.";
+			printf( esc_html__( '%1$s %2$s', 'dickensleungportfolio' ), '©'. $copy_rights, '<a href="http://underscores.me/"></a>' );
 			?>
 			
 		</div><!-- .site-info -->

@@ -103,9 +103,6 @@ function dl_register_custom_post_types() {
     register_post_type( 'dl-works', $args );
 
 
-
-        
-
     $labels = array(
 
         'name'               => _x( 'Gallery', 'post type general name' ),
