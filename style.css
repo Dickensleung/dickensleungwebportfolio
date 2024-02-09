@@ -838,14 +838,8 @@ textarea {
 body.light {
   background-color: #f9ebcd;
 }
-body.light .loading-content h1 {
-  color: hsl(0, 0%, 100%);
-}
 body.light .nav-next::after, body.light .nav-previous::before {
   background: #333;
-}
-body.light .single-work-container {
-  background-color: #fffbf5;
 }
 body.light .process-block a {
   color: #000;
@@ -856,6 +850,9 @@ body.light a:visited {
 }
 body.light #project-card-wrapper #project-title:hover {
   color: #000;
+}
+body.light .single-tools-wrapper a {
+  color: hsl(0, 0%, 100%);
 }
 
 body.dark {
@@ -895,7 +892,7 @@ body.dark #project-card-wrapper #project-title {
   color: hsl(0, 1%, 75%);
 }
 body.dark #project-card-wrapper #project-title:hover {
-  color: #000;
+  color: #fff;
 }
 body.dark .description-content .description-header h1, body.dark .description-content .description-header h2 {
   color: hsl(0, 1%, 75%);
@@ -935,6 +932,9 @@ body.dark .entry-title a {
 }
 body.dark .entry-title a:hover {
   color: #000;
+}
+body.dark .process-block a {
+  color: #0f0f0f;
 }
 
 .visually-hidden {
@@ -1047,7 +1047,7 @@ h2, h3, h4 {
 }
 
 p {
-  font-family: "Roboto Mono", "sans-serif";
+  font-family: "Soehne web halbfett", Arial, sans-serif;
   font-size: 1.2rem;
 }
 
@@ -1190,7 +1190,6 @@ nav ul {
   padding: 10em 0;
   display: flex;
   flex-direction: column;
-  font-family: "Playfair Display", "sans-serif";
 }
 
 nav ul li {
@@ -1437,6 +1436,9 @@ nav ul li:hover {
   position: relative;
   padding: 0 1em;
 }
+.about-me-wrapper a {
+  text-decoration: underline;
+}
 .about-me-wrapper h2 {
   font-size: 1em;
   font-family: "Playfair Display", "sans-serif";
@@ -1471,7 +1473,6 @@ nav ul li:hover {
   padding: 0 1.2rem 0 0;
   width: 5px;
   height: 5px;
-  color: #333;
 }
 .about-me-wrapper .about-content {
   display: none;
@@ -1640,7 +1641,6 @@ nav ul li:hover {
   color: rgb(255, 255, 255);
   height: fit-content;
   white-space: nowrap;
-  font-weight: 600;
   cursor: default;
   margin: 0 1.1em 0 0;
   border-radius: 10px;
@@ -1963,7 +1963,6 @@ nav ul li:hover {
   width: 100%;
   position: relative;
   z-index: 998;
-  background-color: rgba(244, 243, 237, 0.1019607843);
   padding: 0 1.1rem;
   overflow-x: hidden;
   min-height: 80vh;

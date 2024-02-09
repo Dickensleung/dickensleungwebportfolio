@@ -137,21 +137,18 @@ add_action( 'widgets_init', 'dickensleungwebportfolio_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function dickensleungwebportfolio_scripts() {
-
-	//JS FILES
-	wp_enqueue_script( 'dickensleungwebportfolio-slickslider', get_template_directory_uri(). '/js/slick.min.js', array('jquery'), '20240125', true );
-	wp_enqueue_script( 'dickensleungwebportfolio-slick-setting', get_template_directory_uri(). '/js/slick-setting.js', array('jquery', 'dickensleungwebportfolio-slickslider'), '20240125', true );
-	wp_enqueue_script( 'dickensleungwebportfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'dickensleungwebportfolio-darkmode-toggle', get_template_directory_uri() . '/js/darkmode-toggle.js', array(), _S_VERSION, true );
-
-	wp_enqueue_script( 'dickensleungwebportfolio-persistent-image-rollover-settings', get_template_directory_uri().'/js/persistent-image-rollover-settings.js', array('jquery'), '20240125', true );
-	
+function dickensleungwebportfolio_scripts() {	
 	//CSS FILES
-	wp_enqueue_style( 'dickensleungwebportfolio-style', get_stylesheet_uri(), array(), rand(111,2222), 'all');
+	wp_enqueue_style( 'dickensleungwebportfolio-style', get_stylesheet_uri(), array(), '20240207', 'all');
 	wp_style_add_data( 'dickensleungwebportfolio-style', 'rtl', 'replace' );
 	wp_enqueue_style( 'dickensleungwebportfolio-slick', get_template_directory_uri() . '/css/slick.css' );
 	wp_enqueue_style( 'dickensleungwebportfolio-slicktheme', get_template_directory_uri() . '/css/slick-theme.css' );
+	//JS FILES
+	wp_enqueue_script( 'dickensleungwebportfolio-slickslider', get_template_directory_uri(). '/js/slick.min.js', array('jquery'), '20240125', true );
+	wp_enqueue_script( 'dickensleungwebportfolio-slick-setting', get_template_directory_uri(). '/js/slick-setting.js', array('jquery', 'dickensleungwebportfolio-slickslider'), '20240125', true );
+	wp_enqueue_script( 'dickensleungwebportfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20240207', true );
+	wp_enqueue_script( 'dickensleungwebportfolio-darkmode-toggle', get_template_directory_uri() . '/js/darkmode-toggle.js', array(), '20240207', true );
+	wp_enqueue_script( 'dickensleungwebportfolio-persistent-image-rollover-settings', get_template_directory_uri().'/js/persistent-image-rollover-settings.js', array('jquery'), '20240125', true );
 	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

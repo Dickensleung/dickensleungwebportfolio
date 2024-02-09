@@ -24,7 +24,7 @@ get_header();
 				<article class="about-me-header">
 					<h2>about me</h2>
 					<div class="about-me-header-innerwrap">
-						<img alt="about-me-profile-picture" class="profile-picture profile-picture-mobile" src="<?php echo get_template_directory_uri();?>/images/profile-picture.jpg">
+						<img alt="about-me-profile-picture" class="profile-picture profile-picture-mobile" src="<?php echo get_template_directory_uri();?>/images/profile-picture.png">
 						<h1>the Developer.</h1>
 					</div>
 
